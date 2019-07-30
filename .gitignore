@@ -1,0 +1,47 @@
+# ignore Unity generated files
+Temp/
+Library/
+Builds/
+PC\ Build/
+Logs/
+
+# ignore Visual Studio / MonoDevelop generated files
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+.vscode
+
+# ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.app
+*_Data/
+*.exe
+
+ProjectSettings/ProjectVersion.txt
+
+Assets/Scenes/graphics*
+Assets/Scenes/\#graphics*
+Assets/Meshes/Materials/Textures/logos.meta
+Assets/Meshes/Materials/01 - Default.mat
+Assets/Meshes/Materials/01 - Default.mat.meta
+Assets/Meshes/Materials/02 - Default.mat
+Assets/Meshes/Materials/02 - Default.mat.meta
+Assets/Meshes/Materials/06 - Default.mat
+Assets/Meshes/Materials/06 - Default.mat.meta
+Assets/Meshes/unicorn.fbm.meta
+Assets/Standard Assets/Effects/GlassRefraction/Materials.meta
+Assets/Meshes/Materials/Textures/UI/Materials.meta
