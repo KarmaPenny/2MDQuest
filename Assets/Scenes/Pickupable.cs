@@ -3,9 +3,11 @@
 public class Pickupable : MonoBehaviour {
     Hand hand;
     Rigidbody rb;
+    Collider[] colliders;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
+        colliders = GetComponentsInChildren<Collider>();
     }
 
     void Update() {
@@ -25,7 +27,10 @@ public class Pickupable : MonoBehaviour {
             hand.contents = null;
         }
         hand = target;
-        rb.isKinematic = true;
+        foreach (Collider collider in colliders) {
+            collider.enabled = false;
+        }
+        rb.useGravity = false;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
@@ -33,7 +38,10 @@ public class Pickupable : MonoBehaviour {
     public void Throw(Vector3 velocity, Vector3 angularVelocity) {
         Debug.Log(gameObject.name + " thrown by " + hand.gameObject.name + " with velocity " + velocity);
         hand = null;
-        rb.isKinematic = false;
+        foreach (Collider collider in colliders) {
+            collider.enabled = false;
+        }
+        rb.useGravity = true;
         rb.velocity = velocity;
         rb.angularVelocity = angularVelocity;
     }
