@@ -39,7 +39,7 @@ public class Pickupable : MonoBehaviour {
         Debug.Log(gameObject.name + " thrown by " + hand.gameObject.name + " with velocity " + velocity);
         hand = null;
         foreach (Collider collider in colliders) {
-            collider.enabled = false;
+            collider.enabled = true;
         }
         rb.useGravity = true;
         rb.velocity = velocity;
